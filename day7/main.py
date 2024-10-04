@@ -1,31 +1,41 @@
-country = {'Kenya','Uganda','Tanzania'}
+st =set()
+dt = {"animal","humans"}
 
-#checking if an element exist in a set
-print('kenya' in country)
+print(type(st))
+print(type(dt))
 
-#Adding an item 
-country.add("Somalia",)
-print(country)
+counties =set(("Nairobi","Mombasa","Nandi","Vihiga"))
+print(counties)
 
-#we can add multiple line using update() which takes list arguments
+print(len(counties))
 
-country.update(['Burundi','Ethopia','Congo'])
-print(country)
+for county in counties:
+    print(county)
 
-#removin item
-country.remove("Congo")
-print(country)
+print("Vihiga" in counties)
 
-#pop removes a random item
+counties.add("Kisumu")
+print(counties)
 
-print(country.pop())
+counties2 = set(("Kisii","Busia"))
 
-#joining sets
-set1 = {'item1','item2','item3'}
-set2 = {'item4','item5','item6'}
+counties.update(counties2)
+print(counties)
 
-print(set1.union(set2))
+counties.remove("Nandi")
+print(counties)
 
-set3 = set1.update(set2)
+print(counties.pop())
 
-print(set3)
+counties.clear()
+print(counties)
+
+del counties
+
+st1 = set(('item1','item2','item3'))
+st2 = set(('item4','item5','item6'))
+
+print(st1.union(st2))
+st1.update(st2)
+print(st1)
+

@@ -4,30 +4,40 @@ A = {19, 22, 24, 20, 25, 26}
 B = {19, 22, 20, 25, 26, 24, 28, 27}
 age = [22, 19, 24, 25, 26, 24, 25, 24]
 
+#1
 print(len(it_companies))
+#2
 it_companies.add("Twitter")
 print(it_companies)
 
-it_companies.update(['Safaricom','Amazon','NAYA'])
+#3
+it_companies2=set(("NAYA","POA"))
+it_companies.update(it_companies2)
+print(it_companies)
+#4
+it_companies.remove("NAYA")
 print(it_companies)
 
-it_companies.remove("Facebook")
-print(it_companies)
-
-print(A.issubset(B))
-
-it_companies.discard
-("awo")
-
-print(A.union(B))
+#exercise level 2
+#1
+A.union(B)
+print(A)
+#2
 print(A.intersection(B))
+#3
+print(A.issubset(B))
+#4
+print(A.isdisjoint(B))
+#5
+print(A.difference(B))
+#6
+del A
 
-print('------------------------------------------------')
-print(age)
-age1 = set(age)
-print(age1)
+#exercise level 3
+agest = set(age)
+print("the len of of age list is: ",len(age))
+print("the len of age set is: ",len(agest))
 
-print(len(age) > len(age1) )
 
-string = 'I am a teacher and I love to inspire and teach people'
+string = 'I am a teacher and I love to inspire and teach people.'
 print(len(set(string.split())))
